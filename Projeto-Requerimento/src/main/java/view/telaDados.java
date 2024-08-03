@@ -27,194 +27,37 @@ public class telaDados extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        nomeCompleto = new javax.swing.JTextField();
-        textFRua = new javax.swing.JTextField();
-        textFEstado = new javax.swing.JTextField();
-        textFNomeDaMae = new javax.swing.JTextField();
-        textFBairro = new javax.swing.JTextField();
-        textFNumero = new javax.swing.JTextField();
-        textFCidade = new javax.swing.JTextField();
-        textFnomeDoPai1 = new javax.swing.JTextField();
-        textFCpf = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        nomeCompleto.setText("Nome Completo");
-        nomeCompleto.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        nomeCompleto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeCompletoActionPerformed(evt);
-            }
-        });
-
-        textFRua.setText("Rua");
-        textFRua.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        textFRua.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFRuaActionPerformed(evt);
-            }
-        });
-
-        textFEstado.setText("Estado");
-        textFEstado.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        textFEstado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFEstadoActionPerformed(evt);
-            }
-        });
-
-        textFNomeDaMae.setText("Nome da Mãe");
-        textFNomeDaMae.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        textFNomeDaMae.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFNomeDaMaeActionPerformed(evt);
-            }
-        });
-
-        textFBairro.setText("Bairro");
-        textFBairro.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        textFBairro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFBairroActionPerformed(evt);
-            }
-        });
-
-        textFNumero.setText("Numero");
-        textFNumero.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        textFNumero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFNumeroActionPerformed(evt);
-            }
-        });
-
-        textFCidade.setText("Cidade");
-        textFCidade.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        textFCidade.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFCidadeActionPerformed(evt);
-            }
-        });
-
-        textFnomeDoPai1.setText("Nome do Pai");
-        textFnomeDoPai1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        textFnomeDoPai1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFnomeDoPai1ActionPerformed(evt);
-            }
-        });
-
-        textFCpf.setText("CPF");
-        textFCpf.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        textFCpf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFCpfActionPerformed(evt);
-            }
-        });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solteiro(a)", "Casado(a)", "Divorciado(a)", "Viuvo(a)" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textFCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFRua, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textFNomeDaMae, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFnomeDoPai1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(nomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(textFCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(614, Short.MAX_VALUE))
+            .addGap(0, 927, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textFRua, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFNomeDaMae, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textFBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFnomeDoPai1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textFNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1))
-                .addGap(18, 18, 18)
-                .addComponent(textFCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(textFEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(230, 230, 230))
+            .addGap(0, 490, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 27, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 86, Short.MAX_VALUE))
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void textFRuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFRuaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFRuaActionPerformed
-
-    private void textFEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFEstadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFEstadoActionPerformed
-
-    private void textFNomeDaMaeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFNomeDaMaeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFNomeDaMaeActionPerformed
-
-    private void nomeCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeCompletoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeCompletoActionPerformed
-
-    private void textFBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFBairroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFBairroActionPerformed
-
-    private void textFNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFNumeroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFNumeroActionPerformed
-
-    private void textFCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFCidadeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFCidadeActionPerformed
-
-    private void textFnomeDoPai1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFnomeDoPai1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFnomeDoPai1ActionPerformed
-
-    private void textFCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFCpfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFCpfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,16 +95,6 @@ public class telaDados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nomeCompleto;
-    private javax.swing.JTextField textFBairro;
-    private javax.swing.JTextField textFCidade;
-    private javax.swing.JTextField textFCpf;
-    private javax.swing.JTextField textFEstado;
-    private javax.swing.JTextField textFNomeDaMae;
-    private javax.swing.JTextField textFNumero;
-    private javax.swing.JTextField textFRua;
-    private javax.swing.JTextField textFnomeDoPai1;
     // End of variables declaration//GEN-END:variables
 }
