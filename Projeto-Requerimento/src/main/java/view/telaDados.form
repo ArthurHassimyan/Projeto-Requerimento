@@ -52,9 +52,6 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="textFCEP" min="-2" pref="236" max="-2" attributes="0"/>
-                      <Component id="textFEstado" min="-2" pref="236" max="-2" attributes="0"/>
-                      <Component id="textFCidade" min="-2" pref="236" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="textFRua" min="-2" pref="236" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -66,6 +63,11 @@
                           <Component id="textFCpf" min="-2" pref="236" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
+                          <Component id="textFCidade" min="-2" pref="236" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="comboBoxEstadoCivil" min="-2" pref="236" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
                           <Component id="textFNumero" min="-2" pref="236" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="textFNomeDoMae" min="-2" pref="236" max="-2" attributes="0"/>
@@ -73,8 +75,10 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="textFBairro" min="-2" pref="236" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="comboBoxEstadoCivil" min="-2" pref="236" max="-2" attributes="0"/>
+                          <Component id="textFProfissao" min="-2" pref="236" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="textFCEP" alignment="0" min="-2" pref="236" max="-2" attributes="0"/>
+                      <Component id="textFEstado" alignment="0" min="-2" pref="236" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="700" max="32767" attributes="0"/>
               </Group>
@@ -93,7 +97,7 @@
                       <Component id="textFRua" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
                       <Component id="textFNomeDoPai" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="textFNumero" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
                       <Component id="textFNomeDoMae" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
@@ -101,15 +105,18 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="textFBairro" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
-                      <Component id="comboBoxEstadoCivil" alignment="3" max="32767" attributes="0"/>
+                      <Component id="textFProfissao" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="textFCidade" min="-2" pref="56" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="textFCidade" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
+                      <Component id="comboBoxEstadoCivil" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="textFEstado" min="-2" pref="56" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="textFCEP" min="-2" pref="56" max="-2" attributes="0"/>
-                  <EmptySpace pref="466" max="32767" attributes="0"/>
+                  <EmptySpace pref="478" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -287,6 +294,24 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFNomeDoMaeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="textFProfissao">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder justification="1" title="Profissao">
+                  <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                  <Font PropertyName="font" name="Segoe UI" size="14" style="0"/>
+                </TitledBorder>
+              </Border>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFProfissaoActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="comboBoxEstadoCivil">
