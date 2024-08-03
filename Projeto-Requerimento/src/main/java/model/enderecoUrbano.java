@@ -12,6 +12,7 @@ public class enderecoUrbano {
     private String rua;
     private int numero;
     private String bairro;
+    private int cep;
     private String cidade;
     private String estado;
 
