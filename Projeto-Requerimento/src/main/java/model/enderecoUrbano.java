@@ -15,8 +15,10 @@ public class enderecoUrbano {
     private int cep;
     private String cidade;
     private String estado;
+    
+    
 
-        public String getRua() {
+    public String getRua() {
         return rua;
     }
 
