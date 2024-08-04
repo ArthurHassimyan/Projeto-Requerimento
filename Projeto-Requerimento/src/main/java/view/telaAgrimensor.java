@@ -4,6 +4,10 @@
  */
 package view;
 
+import dao.SpecificDAO;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import model.agrimensor;
 
 /**
@@ -16,6 +20,7 @@ public class telaAgrimensor extends javax.swing.JFrame {
      * Creates new form telaAgrimensor
      */
     public telaAgrimensor() {
+        SpecificDAO.CriaConexao();
         initComponents();
     }
 
@@ -42,13 +47,12 @@ public class telaAgrimensor extends javax.swing.JFrame {
         buttonCadastrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 1024));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 1024));
 
-        textFNome.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "CPF", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+        textFNome.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Nome Agrimensor", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
 
-        textFCpf.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Nome Agrimensor", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+        textFCpf.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "CPF", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
 
         textFNumeroCREA.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Numero CREA", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
 
@@ -91,8 +95,8 @@ public class telaAgrimensor extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textFNomeCREA, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textFNumeroCREA, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFNome, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(textFCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFNome, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(buttonCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -124,9 +128,9 @@ public class telaAgrimensor extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(textFCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(textFCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFNome, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(textFNome, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(textFNumeroCREA, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -152,16 +156,24 @@ public class telaAgrimensor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadastrarActionPerformed
-        agrimensor urbano = new agrimensor();
-        urbano.setRua(textFRua.getText());
-        urbano.setNumero(Integer.valueOf(textFNumero.getText() ));
-        urbano.setEstado(textFEstado.getText());
-        urbano.setCpf(Integer.valueOf(textFCpf.getText() ));
-        urbano.setCidade(textFCidade.getText() );
-        urbano.setCep(Integer.valueOf(textFCEP.getText() ));
-        urbano.setBairro(textFBairro.getText() );
-        urbano.setNomeDoc(textFNomeCREA.getText() );
-        urbano.setNumCrea(textFNumeroCREA.getText() );
+        try {
+            agrimensor agri = new agrimensor();
+
+            agri.setCpf(Integer.valueOf(textFCpf.getText()));
+            agri.setNome(textFNome.getText());
+            agri.setNomeDoc(textFNomeCREA.getText());
+            agri.setNumCrea(textFNumeroCREA.getText());
+            agri.setRua(textFRua.getText());
+            agri.setNumero(Integer.valueOf(textFNumero.getText()));
+            agri.setBairro(textFBairro.getText());
+            agri.setCidade(textFCidade.getText());
+            agri.setCep(Integer.valueOf(textFCEP.getText()));
+            agri.setEstado(textFEstado.getText());
+            SpecificDAO.insertAgri(agri);
+            
+        } catch (SQLException ex) {
+            System.out.println("Erro na Tela Agrimensor" + ex);
+        }
 
     }//GEN-LAST:event_buttonCadastrarActionPerformed
 
