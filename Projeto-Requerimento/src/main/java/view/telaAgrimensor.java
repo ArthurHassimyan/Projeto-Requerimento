@@ -159,15 +159,15 @@ public class telaAgrimensor extends javax.swing.JFrame {
         try {
             agrimensor agri = new agrimensor();
 
-            agri.setCpf(Integer.valueOf(textFCpf.getText()));
+            agri.setCpf(textFCpf.getText());
             agri.setNome(textFNome.getText());
             agri.setNomeDoc(textFNomeCREA.getText());
             agri.setNumCrea(textFNumeroCREA.getText());
             agri.setRua(textFRua.getText());
-            agri.setNumero(Integer.valueOf(textFNumero.getText()));
+            agri.setNumero(textFNumero.getText());
             agri.setBairro(textFBairro.getText());
             agri.setCidade(textFCidade.getText());
-            agri.setCep(Integer.valueOf(textFCEP.getText()));
+            agri.setCep(textFCEP.getText());
             agri.setEstado(textFEstado.getText());
             SpecificDAO.insertAgri(agri);
             

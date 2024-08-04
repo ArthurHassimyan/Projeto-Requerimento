@@ -12,7 +12,7 @@ public class requerente extends enderecoUrbano{
     private String nome;
     private String estadoCivil;
     private String profissao;
-    private int cpf;
+    private String cpf;
     private String pai;
     private String mae;
 
@@ -40,11 +40,11 @@ public class requerente extends enderecoUrbano{
         this.profissao = profissao;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

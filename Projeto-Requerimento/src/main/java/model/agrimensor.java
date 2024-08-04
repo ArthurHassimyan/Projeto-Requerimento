@@ -10,7 +10,7 @@ package model;
  */
 public class agrimensor extends enderecoUrbano{
     private String nome;
-    private int cpf;
+    private String cpf;
     private String numCrea;
     private String nomeDoc;
 
@@ -22,11 +22,11 @@ public class agrimensor extends enderecoUrbano{
         this.nome = nome;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

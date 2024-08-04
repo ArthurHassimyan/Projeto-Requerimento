@@ -10,9 +10,9 @@ package model;
  */
 public class enderecoUrbano {
     private String rua;
-    private int numero;
+    private String numero;
     private String bairro;
-    private int cep;
+    private String cep;
     private String cidade;
     private String estado;
     
@@ -24,11 +24,11 @@ public class enderecoUrbano {
         this.rua = rua;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -40,11 +40,11 @@ public class enderecoUrbano {
         this.bairro = bairro;
     }
 
-    public int getCep() {
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(int cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 
