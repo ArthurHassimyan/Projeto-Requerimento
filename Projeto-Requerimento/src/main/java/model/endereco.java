@@ -8,7 +8,7 @@ package model;
  *
  * @author Arthur Hassimyan
  */
-public class endereco {
+public class Endereco {
     private String endereco;
 
     public String getEndereco() {

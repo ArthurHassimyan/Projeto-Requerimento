@@ -8,7 +8,7 @@ package model;
  *
  * @author Arthur Hassimyan
  */
-public class agrimensor extends endereco{
+public class Agrimensor extends Endereco{
     private String nome;
     private String cpf;
     private String nomeDoc;

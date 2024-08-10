@@ -4,7 +4,12 @@
  */
 package view;
 
+import dao.SpecificDAO;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.text.MaskFormatter;
+import model.Agrimensor;
 
 /**
  *
@@ -16,6 +21,7 @@ public class telaAgrimensor extends javax.swing.JFrame {
      * Creates new form telaDados
      */
     public telaAgrimensor() {
+        SpecificDAO.CriaConexao();
         initComponents();
     }
 
@@ -332,7 +338,19 @@ public class telaAgrimensor extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonLimparCpfActionPerformed
 
     private void buttonCadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadActionPerformed
-        // TODO add your handling code here:
+        try {
+            Agrimensor agri = new Agrimensor();
+            agri.setNome(textFNome.getText());
+            agri.setCpf(formattedTextFieldCpf.getText());
+            agri.setNomeDoc(textFNomeCREA.getText());
+            agri.setNumCrea(textFNumeroCREA.getText());
+            agri.setEstadoCivil(comboBoxEstadoCivil.getSelectedItem().toString());
+            agri.setNacionalidade(textFNacionalidade.getText());
+            agri.setEndereco(textFEndereco.getText());
+            SpecificDAO.insertAgri(agri);
+        } catch (SQLException ex) {
+            System.out.println("Erro Tela Agrimensor" + ex);
+        }
     }//GEN-LAST:event_buttonCadActionPerformed
 
     private void buttonDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDelActionPerformed

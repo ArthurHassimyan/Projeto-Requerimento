@@ -4,7 +4,10 @@
  */
 package view;
 
+import dao.SpecificDAO;
+import java.sql.SQLException;
 import javax.swing.text.MaskFormatter;
+import model.Requerente;
 
 /**
  *
@@ -16,6 +19,7 @@ public class telaDados extends javax.swing.JFrame {
      * Creates new form telaDados
      */
     public telaDados() {
+        SpecificDAO.CriaConexao();
         initComponents();
     }
 
@@ -79,6 +83,11 @@ public class telaDados extends javax.swing.JFrame {
         comboBoxEstadoCivil.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Estado Civil", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
 
         jButton1.setText("CADASTRAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -330,6 +339,23 @@ public class telaDados extends javax.swing.JFrame {
     private void buttonLimparProfissaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLimparProfissaoActionPerformed
         textFProfissao.setText("");
     }//GEN-LAST:event_buttonLimparProfissaoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            Requerente reque = new Requerente();
+            reque.setNome(textFNome.getText());
+            reque.setCpf(formattedTextFieldCpf.getText());
+            reque.setPai(textFNomePai.getText());
+            reque.setMae(textFNomeMae.getText());
+            reque.setProfissao(textFProfissao.getText());
+            reque.setEstadoCivil(comboBoxEstadoCivil.getSelectedItem().toString());
+            reque.setNacionalidade(textFNacionalidade.getText());
+            reque.setEndereco(textFEndereco.getText());
+            SpecificDAO.insertReque(reque);
+        } catch (SQLException ex) {
+            System.out.println("Erro Tela Requerente" + ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
