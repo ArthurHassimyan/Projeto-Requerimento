@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.text.MaskFormatter;
+
 /**
  *
  * @author Arthur Hassimyan
@@ -26,96 +28,57 @@ public class telaDados extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
-        textFNomeCompleto = new javax.swing.JTextField();
-        textFRua = new javax.swing.JTextField();
-        textFNumero = new javax.swing.JTextField();
-        textFBairro = new javax.swing.JTextField();
-        textFCidade = new javax.swing.JTextField();
-        textFCEP = new javax.swing.JTextField();
-        textFCpf = new javax.swing.JTextField();
-        textFNomeDoPai = new javax.swing.JTextField();
-        textFNomeDoMae = new javax.swing.JTextField();
+        textFNomePai = new javax.swing.JTextField();
+        textFNomeMae = new javax.swing.JTextField();
         textFProfissao = new javax.swing.JTextField();
         comboBoxEstadoCivil = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        comboBoxEstado = new javax.swing.JComboBox<>();
         buttonEditar1 = new javax.swing.JButton();
         buttonExcluir = new javax.swing.JButton();
         buttonSalvar = new javax.swing.JButton();
+        textFNome = new javax.swing.JTextField();
+        buttonLimparNome = new javax.swing.JButton();
+        formattedTextFieldCpf = new javax.swing.JFormattedTextField();
+        buttonLimparCpf = new javax.swing.JButton();
+        textFNacionalidade = new javax.swing.JTextField();
+        buttonLimparNacio = new javax.swing.JButton();
+        buttonLimparCrea1 = new javax.swing.JButton();
+        buttonLimparPai = new javax.swing.JButton();
+        buttonLimparMae = new javax.swing.JButton();
+        buttonLimparProfissao = new javax.swing.JButton();
+        textFEndereco = new javax.swing.JTextField();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        textFNomeCompleto.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        textFNomeCompleto.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Nome Completo", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-        textFNomeCompleto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFNomeCompletoActionPerformed(evt);
-            }
-        });
+        textFNomePai.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        textFNomePai.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        textFNomePai.setText("Paulo Henrique Ramalho Hassimyan");
+        textFNomePai.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Nome do Pai", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
 
-        textFRua.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        textFRua.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Rua", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+        textFNomeMae.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        textFNomeMae.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        textFNomeMae.setText("Yvana Abrantes Hassimyan");
+        textFNomeMae.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Nome da Mãe", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
 
-        textFNumero.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        textFNumero.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Numero", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-        textFNumero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFNumeroActionPerformed(evt);
-            }
-        });
-
-        textFBairro.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        textFBairro.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Bairro", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-
-        textFCidade.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        textFCidade.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Cidade", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-
-        textFCEP.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        textFCEP.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "CEP", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-
-        textFCpf.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        textFCpf.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "CPF", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-        textFCpf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFCpfActionPerformed(evt);
-            }
-        });
-
-        textFNomeDoPai.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        textFNomeDoPai.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Nome do Pai", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-        textFNomeDoPai.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFNomeDoPaiActionPerformed(evt);
-            }
-        });
-
-        textFNomeDoMae.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        textFNomeDoMae.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Nome da Mae", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-        textFNomeDoMae.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFNomeDoMaeActionPerformed(evt);
-            }
-        });
-
+        textFProfissao.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         textFProfissao.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        textFProfissao.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Profissao", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-        textFProfissao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFProfissaoActionPerformed(evt);
-            }
-        });
+        textFProfissao.setText("Programador");
+        textFProfissao.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Profissão", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
 
-        comboBoxEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Solteiro(a)", "Casado(a)", "Divorciado(a)", "Viuvo(a)" }));
+        comboBoxEstadoCivil.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        comboBoxEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "solteiro(a)", "casado(a)", "divorciado(a)", "viuvo(a)" }));
         comboBoxEstadoCivil.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Estado Civil", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
 
         jButton1.setText("CADASTRAR");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -145,32 +108,90 @@ public class telaDados extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        comboBoxEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC  ", "AL  ", "AP  ", "AM  ", "BA  ", "CE  ", "DF  ", "ES  ", "GO  ", "MA  ", "MT  ", "MS  ", "MG  ", "PA  ", "PB  ", "PR  ", "PE  ", "PI  ", "RJ  ", "RN  ", "RS  ", "RO  ", "RR  ", "SC  ", "SP  ", "SE  ", "TO" }));
-        comboBoxEstado.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Estado", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
-
         buttonEditar1.setText("EDITAR");
-        buttonEditar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        buttonEditar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonEditar1ActionPerformed(evt);
-            }
-        });
 
         buttonExcluir.setText("EXCLUIR");
-        buttonExcluir.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        buttonExcluir.addActionListener(new java.awt.event.ActionListener() {
+
+        buttonSalvar.setText("SALVAR");
+
+        textFNome.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        textFNome.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        textFNome.setText("Arthur Henrique Abrantes Hassimyan");
+        textFNome.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Nome Agrimensor", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+
+        buttonLimparNome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/limparCampo.png"))); // NOI18N
+        buttonLimparNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonExcluirActionPerformed(evt);
+                buttonLimparNomeActionPerformed(evt);
             }
         });
 
-        buttonSalvar.setText("SALVAR");
-        buttonSalvar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        buttonSalvar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonSalvarActionPerformed(evt);
+        formattedTextFieldCpf.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "CPF", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+        try {
+            MaskFormatter formatter = new MaskFormatter("###.###.###-##");
+            formatter.setPlaceholderCharacter('_');
+            formattedTextFieldCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(formatter));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        formattedTextFieldCpf.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        formattedTextFieldCpf.setText("999.999.999-99");
+        formattedTextFieldCpf.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        formattedTextFieldCpf.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                formattedTextFieldCpf.setCaretPosition(0);
             }
         });
+
+        buttonLimparCpf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/limparCampo.png"))); // NOI18N
+        buttonLimparCpf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLimparCpfActionPerformed(evt);
+            }
+        });
+
+        textFNacionalidade.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        textFNacionalidade.setText("brasileiro(a)");
+        textFNacionalidade.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Nacionalidade", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+
+        buttonLimparNacio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/limparCampo.png"))); // NOI18N
+        buttonLimparNacio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLimparNacioActionPerformed(evt);
+            }
+        });
+
+        buttonLimparCrea1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/limparCampo.png"))); // NOI18N
+        buttonLimparCrea1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLimparCrea1ActionPerformed(evt);
+            }
+        });
+
+        buttonLimparPai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/limparCampo.png"))); // NOI18N
+        buttonLimparPai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLimparPaiActionPerformed(evt);
+            }
+        });
+
+        buttonLimparMae.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/limparCampo.png"))); // NOI18N
+        buttonLimparMae.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLimparMaeActionPerformed(evt);
+            }
+        });
+
+        buttonLimparProfissao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/limparCampo.png"))); // NOI18N
+        buttonLimparProfissao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLimparProfissaoActionPerformed(evt);
+            }
+        });
+
+        textFEndereco.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        textFEndereco.setText("Avenida Pedro Abrantes nº 123, centro, Malacacheta/MG");
+        textFEndereco.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Endereço", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 16))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -180,35 +201,41 @@ public class telaDados extends javax.swing.JFrame {
                 .addGap(120, 120, 120)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(textFNomeMae, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(textFNome, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                            .addComponent(textFNomePai)
+                            .addComponent(textFProfissao))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(textFNomeDoPai, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(buttonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFNomeDoMae, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(comboBoxEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(buttonEditar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(buttonExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboBoxEstado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(textFCEP)
-                            .addComponent(textFCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(buttonLimparNome, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonLimparPai, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonLimparMae, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(40, 40, 40)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(comboBoxEstadoCivil, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(textFNacionalidade)
+                                    .addComponent(formattedTextFieldCpf, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(buttonLimparCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonLimparNacio, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(buttonLimparProfissao, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(textFCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textFProfissao, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(textFNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(57, 57, 57)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(textFBairro)
-                            .addComponent(textFNumero)
-                            .addComponent(textFRua, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(85, 85, 85)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(75, 75, 75)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(buttonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(textFEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buttonLimparCrea1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(80, 80, 80)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(96, 96, 96))
         );
@@ -216,36 +243,38 @@ public class telaDados extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(61, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(148, 148, 148)
-                                .addComponent(textFProfissao, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(textFNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFRua, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(textFCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(buttonLimparNome, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFNome, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(formattedTextFieldCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonLimparCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(textFNacionalidade, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonLimparNacio, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(textFBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(comboBoxEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(textFNomePai, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonLimparPai, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(textFNomeMae, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonLimparMae, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(textFNomeDoPai, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(textFProfissao, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonLimparProfissao, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(textFNomeDoMae, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(comboBoxEstadoCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboBoxEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(textFEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonLimparCrea1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(buttonEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -253,8 +282,10 @@ public class telaDados extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(buttonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(buttonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(16, 16, 16)))
-                .addGap(55, 55, 55))
+                        .addGap(71, 71, 71))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -272,41 +303,33 @@ public class telaDados extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textFNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFNumeroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFNumeroActionPerformed
+    private void buttonLimparCrea1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLimparCrea1ActionPerformed
+        textFEndereco.setText("");
+    }//GEN-LAST:event_buttonLimparCrea1ActionPerformed
 
-    private void textFNomeCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFNomeCompletoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFNomeCompletoActionPerformed
+    private void buttonLimparNacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLimparNacioActionPerformed
+        textFNacionalidade.setText("");
+    }//GEN-LAST:event_buttonLimparNacioActionPerformed
 
-    private void textFCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFCpfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFCpfActionPerformed
+    private void buttonLimparCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLimparCpfActionPerformed
+        formattedTextFieldCpf.setText("");
+    }//GEN-LAST:event_buttonLimparCpfActionPerformed
 
-    private void textFNomeDoPaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFNomeDoPaiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFNomeDoPaiActionPerformed
+    private void buttonLimparNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLimparNomeActionPerformed
+        textFNome.setText("");
+    }//GEN-LAST:event_buttonLimparNomeActionPerformed
 
-    private void textFNomeDoMaeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFNomeDoMaeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFNomeDoMaeActionPerformed
+    private void buttonLimparPaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLimparPaiActionPerformed
+        textFNomePai.setText("");
+    }//GEN-LAST:event_buttonLimparPaiActionPerformed
 
-    private void textFProfissaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFProfissaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFProfissaoActionPerformed
+    private void buttonLimparMaeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLimparMaeActionPerformed
+        textFNomeMae.setText("");
+    }//GEN-LAST:event_buttonLimparMaeActionPerformed
 
-    private void buttonEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEditar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonEditar1ActionPerformed
-
-    private void buttonExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExcluirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonExcluirActionPerformed
-
-    private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonSalvarActionPerformed
+    private void buttonLimparProfissaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLimparProfissaoActionPerformed
+        textFProfissao.setText("");
+    }//GEN-LAST:event_buttonLimparProfissaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -346,22 +369,26 @@ public class telaDados extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonEditar1;
     private javax.swing.JButton buttonExcluir;
+    private javax.swing.JButton buttonLimparCpf;
+    private javax.swing.JButton buttonLimparCrea1;
+    private javax.swing.JButton buttonLimparMae;
+    private javax.swing.JButton buttonLimparNacio;
+    private javax.swing.JButton buttonLimparNome;
+    private javax.swing.JButton buttonLimparPai;
+    private javax.swing.JButton buttonLimparProfissao;
     private javax.swing.JButton buttonSalvar;
-    private javax.swing.JComboBox<String> comboBoxEstado;
     private javax.swing.JComboBox<String> comboBoxEstadoCivil;
+    private javax.swing.JFormattedTextField formattedTextFieldCpf;
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField textFBairro;
-    private javax.swing.JTextField textFCEP;
-    private javax.swing.JTextField textFCidade;
-    private javax.swing.JTextField textFCpf;
-    private javax.swing.JTextField textFNomeCompleto;
-    private javax.swing.JTextField textFNomeDoMae;
-    private javax.swing.JTextField textFNomeDoPai;
-    private javax.swing.JTextField textFNumero;
+    private javax.swing.JTextField textFEndereco;
+    private javax.swing.JTextField textFNacionalidade;
+    private javax.swing.JTextField textFNome;
+    private javax.swing.JTextField textFNomeMae;
+    private javax.swing.JTextField textFNomePai;
     private javax.swing.JTextField textFProfissao;
-    private javax.swing.JTextField textFRua;
     // End of variables declaration//GEN-END:variables
 }

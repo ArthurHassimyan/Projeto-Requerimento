@@ -8,11 +8,13 @@ package model;
  *
  * @author Arthur Hassimyan
  */
-public class agrimensor extends enderecoUrbano{
+public class agrimensor extends endereco{
     private String nome;
     private String cpf;
-    private String numCrea;
     private String nomeDoc;
+    private String numCrea;
+    private String estadoCivil;
+    private String nacionalidade;
 
     public String getNome() {
         return nome;
@@ -30,14 +32,6 @@ public class agrimensor extends enderecoUrbano{
         this.cpf = cpf;
     }
 
-    public String getNumCrea() {
-        return numCrea;
-    }
-
-    public void setNumCrea(String numCrea) {
-        this.numCrea = numCrea;
-    }
-
     public String getNomeDoc() {
         return nomeDoc;
     }
@@ -45,4 +39,29 @@ public class agrimensor extends enderecoUrbano{
     public void setNomeDoc(String nomeDoc) {
         this.nomeDoc = nomeDoc;
     }
+
+    public String getNumCrea() {
+        return numCrea;
+    }
+
+    public void setNumCrea(String numCrea) {
+        this.numCrea = numCrea;
+    }
+    
+    public String getEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
+    }
+    
 }

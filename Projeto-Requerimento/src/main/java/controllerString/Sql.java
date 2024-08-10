@@ -13,7 +13,7 @@ public final class Sql {
     private final static String baseProperties = base + "/src/main/java/properties";
     public final static String bdProperties = baseProperties + "/configBD.properties";
     
-    public final static String insertAgri = "INSERT INTO agrimemsor (cpf, nome, nome_doc, crea, estado_civil, rua, numero, bairro, cep, cidade, estado) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    public final static String insertReque = "INSERT INTO agrimemsor (cpf, nome, estadoCivil, profissao, pai, mae, rua, numero, bairro, cep, cidade, estado) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    public final static String insertAgri = "INSERT INTO agrimemsor (cpf_ag, nome_ag, nome_doc_ag, crea_ag, estado_civil_ag, endereco_ag) VALUES (?, ?, ?, ?, ?, ?)";
+    public final static String insertReque = "INSERT INTO agrimemsor (cpf_rq, nome_rq, estadoCivil_rq, profissao_rq, pai_rq, mae_rq, endereco_rq) VALUES (?, ?, ?, ?, ?, ?, ?)";
     
 }

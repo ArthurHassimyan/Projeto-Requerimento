@@ -22,12 +22,8 @@ public class SpecificDAO extends GenericDAO{
         pstdados.setString(2, rq.getNome());
         pstdados.setString(3, rq.getNomeDoc());
         pstdados.setString(4, rq.getNumCrea());
-        pstdados.setString(5, rq.getRua());        
-        pstdados.setString(6, rq.getNumero());        
-        pstdados.setString(7, rq.getBairro());        
-        pstdados.setString(8, rq.getCep());
-        pstdados.setString(9, rq.getCidade());
-        pstdados.setString(10, rq.getEstado());
+        pstdados.setString(5, rq.getEstadoCivil());
+        pstdados.setString(6, rq.getEndereco());
         return genericUpdate();
     } 
     
@@ -39,11 +35,7 @@ public class SpecificDAO extends GenericDAO{
         pstdados.setString(4, rq.getProfissao());
         pstdados.setString(5, rq.getPai());
         pstdados.setString(6, rq.getMae());
-        pstdados.setString(7, rq.getRua());
-        pstdados.setString(8, rq.getNumero());        
-        pstdados.setString(9, rq.getCep());
-        pstdados.setString(10, rq.getCidade());
-        pstdados.setString(11, rq.getEstado());
+        pstdados.setString(7, rq.getEndereco());
         return genericUpdate();
     }
     

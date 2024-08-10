@@ -8,13 +8,14 @@ package model;
  *
  * @author Arthur Hassimyan
  */
-public class requerente extends enderecoUrbano{
+public class requerente extends endereco{
     private String nome;
-    private String estadoCivil;
-    private String profissao;
     private String cpf;
     private String pai;
     private String mae;
+    private String profissao;
+    private String nacionalidade;
+    private String estadoCivil;
 
     public String getNome() {
         return nome;
@@ -22,22 +23,6 @@ public class requerente extends enderecoUrbano{
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getEstadoCivil() {
-        return estadoCivil;
-    }
-
-    public void setEstadoCivil(String estadoCivil) {
-        this.estadoCivil = estadoCivil;
-    }
-
-    public String getProfissao() {
-        return profissao;
-    }
-
-    public void setProfissao(String profissao) {
-        this.profissao = profissao;
     }
 
     public String getCpf() {
@@ -63,4 +48,29 @@ public class requerente extends enderecoUrbano{
     public void setMae(String mae) {
         this.mae = mae;
     }
+
+    public String getProfissao() {
+        return profissao;
+    }
+
+    public void setProfissao(String profissao) {
+        this.profissao = profissao;
+    }
+
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
+    }
+
+    public String getEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+    
 }
