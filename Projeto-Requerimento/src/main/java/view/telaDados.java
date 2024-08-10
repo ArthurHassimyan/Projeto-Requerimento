@@ -38,12 +38,12 @@ public class telaDados extends javax.swing.JFrame {
         textFNomeMae = new javax.swing.JTextField();
         textFProfissao = new javax.swing.JTextField();
         comboBoxEstadoCivil = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
+        buttonCad = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        buttonEditar1 = new javax.swing.JButton();
-        buttonExcluir = new javax.swing.JButton();
-        buttonSalvar = new javax.swing.JButton();
+        buttonEdit = new javax.swing.JButton();
+        buttonDel = new javax.swing.JButton();
+        buttonSave = new javax.swing.JButton();
         textFNome = new javax.swing.JTextField();
         buttonLimparNome = new javax.swing.JButton();
         formattedTextFieldCpf = new javax.swing.JFormattedTextField();
@@ -82,10 +82,10 @@ public class telaDados extends javax.swing.JFrame {
         comboBoxEstadoCivil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "solteiro(a)", "casado(a)", "divorciado(a)", "viuvo(a)" }));
         comboBoxEstadoCivil.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Estado Civil", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
 
-        jButton1.setText("CADASTRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonCad.setText("CADASTRAR");
+        buttonCad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                buttonCadActionPerformed(evt);
             }
         });
 
@@ -117,11 +117,21 @@ public class telaDados extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        buttonEditar1.setText("EDITAR");
+        buttonEdit.setText("EDITAR");
+        buttonEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEditActionPerformed(evt);
+            }
+        });
 
-        buttonExcluir.setText("EXCLUIR");
+        buttonDel.setText("EXCLUIR");
 
-        buttonSalvar.setText("SALVAR");
+        buttonSave.setText("SALVAR");
+        buttonSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSaveActionPerformed(evt);
+            }
+        });
 
         textFNome.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         textFNome.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -234,12 +244,12 @@ public class telaDados extends javax.swing.JFrame {
                             .addComponent(buttonLimparProfissao, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(buttonCad, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(75, 75, 75)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buttonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(buttonDel, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(textFEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -285,12 +295,12 @@ public class telaDados extends javax.swing.JFrame {
                             .addComponent(buttonLimparCrea1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(buttonCad, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(buttonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(buttonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonDel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(71, 71, 71))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 604, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -340,7 +350,7 @@ public class telaDados extends javax.swing.JFrame {
         textFProfissao.setText("");
     }//GEN-LAST:event_buttonLimparProfissaoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void buttonCadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadActionPerformed
         try {
             requerente reque = new requerente();
             reque.setNome(textFNome.getText());
@@ -355,7 +365,21 @@ public class telaDados extends javax.swing.JFrame {
         } catch (SQLException ex) {
             System.out.println("Erro Tela Requerente" + ex);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_buttonCadActionPerformed
+
+    private void buttonEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEditActionPerformed
+        buttonCad.setEnabled(false);
+        buttonDel.setEnabled(false);
+        buttonEdit.setEnabled(false);
+        buttonSave.setEnabled(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonEditActionPerformed
+
+    private void buttonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaveActionPerformed
+        buttonCad.setEnabled(true);
+        buttonDel.setEnabled(true);
+        buttonEdit.setEnabled(true);
+        buttonSave.setEnabled(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonSaveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -393,8 +417,9 @@ public class telaDados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonEditar1;
-    private javax.swing.JButton buttonExcluir;
+    private javax.swing.JButton buttonCad;
+    private javax.swing.JButton buttonDel;
+    private javax.swing.JButton buttonEdit;
     private javax.swing.JButton buttonLimparCpf;
     private javax.swing.JButton buttonLimparCrea1;
     private javax.swing.JButton buttonLimparMae;
@@ -402,10 +427,9 @@ public class telaDados extends javax.swing.JFrame {
     private javax.swing.JButton buttonLimparNome;
     private javax.swing.JButton buttonLimparPai;
     private javax.swing.JButton buttonLimparProfissao;
-    private javax.swing.JButton buttonSalvar;
+    private javax.swing.JButton buttonSave;
     private javax.swing.JComboBox<String> comboBoxEstadoCivil;
     private javax.swing.JFormattedTextField formattedTextFieldCpf;
-    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

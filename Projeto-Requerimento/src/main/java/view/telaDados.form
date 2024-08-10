@@ -98,13 +98,13 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton1" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
-                              <Component id="buttonSalvar" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
+                              <Component id="buttonCad" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
+                              <Component id="buttonSave" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="buttonExcluir" min="-2" pref="234" max="-2" attributes="0"/>
-                              <Component id="buttonEditar1" min="-2" pref="234" max="-2" attributes="0"/>
+                              <Component id="buttonDel" min="-2" pref="234" max="-2" attributes="0"/>
+                              <Component id="buttonEdit" min="-2" pref="234" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -165,13 +165,13 @@
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton1" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
-                              <Component id="buttonEditar1" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="buttonCad" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="buttonEdit" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="buttonSalvar" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
-                              <Component id="buttonExcluir" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="buttonSave" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="buttonDel" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                       </Group>
@@ -270,12 +270,12 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="buttonCad">
           <Properties>
             <Property name="text" type="java.lang.String" value="CADASTRAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonCadActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -297,20 +297,26 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="buttonEditar1">
+        <Component class="javax.swing.JButton" name="buttonEdit">
           <Properties>
             <Property name="text" type="java.lang.String" value="EDITAR"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonEditActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="buttonExcluir">
+        <Component class="javax.swing.JButton" name="buttonDel">
           <Properties>
             <Property name="text" type="java.lang.String" value="EXCLUIR"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="buttonSalvar">
+        <Component class="javax.swing.JButton" name="buttonSave">
           <Properties>
             <Property name="text" type="java.lang.String" value="SALVAR"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonSaveActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="textFNome">
           <Properties>
