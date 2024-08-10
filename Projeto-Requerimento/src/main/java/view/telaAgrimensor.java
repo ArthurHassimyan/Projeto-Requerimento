@@ -6,10 +6,8 @@ package view;
 
 import dao.SpecificDAO;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.text.MaskFormatter;
-import model.Agrimensor;
+import model.agrimensor;
 
 /**
  *
@@ -339,7 +337,7 @@ public class telaAgrimensor extends javax.swing.JFrame {
 
     private void buttonCadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadActionPerformed
         try {
-            Agrimensor agri = new Agrimensor();
+            agrimensor agri = new agrimensor();
             agri.setNome(textFNome.getText());
             agri.setCpf(formattedTextFieldCpf.getText());
             agri.setNomeDoc(textFNomeCREA.getText());

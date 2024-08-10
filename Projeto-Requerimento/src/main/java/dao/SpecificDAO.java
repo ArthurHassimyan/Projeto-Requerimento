@@ -7,8 +7,8 @@ package dao;
 import controllerString.Sql;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import model.Agrimensor;
-import model.Requerente;
+import model.agrimensor;
+import model.requerente;
 
 /**
  *
@@ -16,7 +16,7 @@ import model.Requerente;
  */
 public class SpecificDAO extends GenericDAO{
 
-    public static boolean insertAgri(Agrimensor ag) throws SQLException {
+    public static boolean insertAgri(agrimensor ag) throws SQLException {
         prepStat(Sql.insertAgri, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);        
         pstdados.setString(1, ag.getCpf());
         pstdados.setString(2, ag.getNome());
@@ -28,7 +28,7 @@ public class SpecificDAO extends GenericDAO{
         return genericUpdate();
     } 
     
-    public static boolean insertReque(Requerente rq) throws SQLException {
+    public static boolean insertReque(requerente rq) throws SQLException {
         prepStat(Sql.insertReque, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);        
         pstdados.setString(1, rq.getCpf());
         pstdados.setString(2, rq.getNome());

@@ -8,7 +8,7 @@ package model;
  *
  * @author Arthur Hassimyan
  */
-public class Requerente extends Endereco{
+public class requerente extends endereco{
     private String nome;
     private String cpf;
     private String pai;

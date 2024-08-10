@@ -7,7 +7,7 @@ package view;
 import dao.SpecificDAO;
 import java.sql.SQLException;
 import javax.swing.text.MaskFormatter;
-import model.Requerente;
+import model.requerente;
 
 /**
  *
@@ -342,7 +342,7 @@ public class telaDados extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-            Requerente reque = new Requerente();
+            requerente reque = new requerente();
             reque.setNome(textFNome.getText());
             reque.setCpf(formattedTextFieldCpf.getText());
             reque.setPai(textFNomePai.getText());
