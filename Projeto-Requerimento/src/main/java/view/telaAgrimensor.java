@@ -6,6 +6,7 @@ package view;
 
 import dao.SpecificDAO;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 import model.agrimensor;
@@ -335,18 +336,21 @@ public class telaAgrimensor extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonLimparCpfActionPerformed
 
     private void buttonCadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadActionPerformed
-        try {
-            agrimensor agri = new agrimensor();
-            agri.setNome(textFNome.getText());
-            agri.setCpf(formattedTextFieldCpf.getText());
-            agri.setNomeDoc(textFNomeCREA.getText());
-            agri.setNumCrea(textFNumeroCREA.getText());
-            agri.setEstadoCivil(comboBoxEstadoCivil.getSelectedItem().toString());
-            agri.setNacionalidade(textFNacionalidade.getText());
-            agri.setEndereco(textFEndereco.getText());
-            SpecificDAO.insertAgri(agri);
-        } catch (SQLException ex) {
-            System.out.println("Erro Tela Agrimensor" + ex);
+        int opc = JOptionPane.showConfirmDialog(null, "Deseja realmente cadastrar", "Cadastrar", JOptionPane.YES_NO_CANCEL_OPTION);
+        if (opc == JOptionPane.YES_OPTION) {
+            try {
+                agrimensor agri = new agrimensor();
+                agri.setNome(textFNome.getText());
+                agri.setCpf(formattedTextFieldCpf.getText());
+                agri.setNomeDoc(textFNomeCREA.getText());
+                agri.setNumCrea(textFNumeroCREA.getText());
+                agri.setEstadoCivil(comboBoxEstadoCivil.getSelectedItem().toString());
+                agri.setNacionalidade(textFNacionalidade.getText());
+                agri.setEndereco(textFEndereco.getText());
+                SpecificDAO.insertAgri(agri);
+            } catch (SQLException ex) {
+                System.out.println("Erro Tela Agrimensor" + ex);
+            }
         }
     }//GEN-LAST:event_buttonCadActionPerformed
 
@@ -406,15 +410,15 @@ public class telaAgrimensor extends javax.swing.JFrame {
         });
     }
 
-    public void readTable(){
+    public void readTable() {
         DefaultTableModel model = (DefaultTableModel) tableAgri.getModel();
-        for(agrimensor agri: SpecificDAO.readAgri()){
-            model.addRow(new Object[]{            
-                agri.getNome(),            
+        for (agrimensor agri : SpecificDAO.readAgri()) {
+            model.addRow(new Object[]{
+                agri.getNome(),
                 agri.getCpf()});
         }
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCad;
     private javax.swing.JButton buttonDel;

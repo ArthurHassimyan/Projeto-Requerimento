@@ -6,6 +6,7 @@ package view;
 
 import dao.SpecificDAO;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 import model.requerente;
@@ -350,19 +351,22 @@ public class telaDados extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonLimparProfissaoActionPerformed
 
     private void buttonCadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCadActionPerformed
-        try {
-            requerente reque = new requerente();
-            reque.setNome(textFNome.getText());
-            reque.setCpf(formattedTextFieldCpf.getText());
-            reque.setPai(textFNomePai.getText());
-            reque.setMae(textFNomeMae.getText());
-            reque.setProfissao(textFProfissao.getText());
-            reque.setEstadoCivil(comboBoxEstadoCivil.getSelectedItem().toString());
-            reque.setNacionalidade(textFNacionalidade.getText());
-            reque.setEndereco(textFEndereco.getText());
-            SpecificDAO.insertReque(reque);
-        } catch (SQLException ex) {
-            System.out.println("Erro Tela Requerente" + ex);
+        int opc = JOptionPane.showConfirmDialog(null, "Deseja realmente cadastrar", "Cadastrar", JOptionPane.YES_NO_CANCEL_OPTION);
+        if (opc == JOptionPane.YES_OPTION) {
+            try {
+                requerente reque = new requerente();
+                reque.setNome(textFNome.getText());
+                reque.setCpf(formattedTextFieldCpf.getText());
+                reque.setPai(textFNomePai.getText());
+                reque.setMae(textFNomeMae.getText());
+                reque.setProfissao(textFProfissao.getText());
+                reque.setEstadoCivil(comboBoxEstadoCivil.getSelectedItem().toString());
+                reque.setNacionalidade(textFNacionalidade.getText());
+                reque.setEndereco(textFEndereco.getText());
+                SpecificDAO.insertReque(reque);
+            } catch (SQLException ex) {
+                System.out.println("Erro Tela Requerente" + ex);
+            }
         }
     }//GEN-LAST:event_buttonCadActionPerformed
 
@@ -415,15 +419,15 @@ public class telaDados extends javax.swing.JFrame {
         });
     }
 
-   public void readTable(){
+    public void readTable() {
         DefaultTableModel model = (DefaultTableModel) tableReque.getModel();
-        for(requerente reque: SpecificDAO.readReque()){
-            model.addRow(new Object[]{            
-                reque.getNome(),            
+        for (requerente reque : SpecificDAO.readReque()) {
+            model.addRow(new Object[]{
+                reque.getNome(),
                 reque.getCpf()});
         }
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCad;
     private javax.swing.JButton buttonDel;
