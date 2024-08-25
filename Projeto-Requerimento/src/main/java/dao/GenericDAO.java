@@ -98,7 +98,7 @@ public class GenericDAO {
             rsdados = pstdados.executeQuery();
             return rsdados.first();
         } catch (SQLException erro) {
-            System.out.println("Erro ao executar consulta = " + erro);
+            System.out.println("Erro genericQuery ao executar consulta = " + erro);
         }
         return false;
     }

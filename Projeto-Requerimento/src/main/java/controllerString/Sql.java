@@ -15,7 +15,7 @@ public final class Sql {
     
     public final static String insertAgri = "INSERT INTO agrimensor (cpf_ag, nome_ag, nome_doc_ag, crea_ag, estado_civil_ag, nacionalidade_ag, endereco_ag) VALUES (?, ?, ?, ?, ?, ?, ?)";
     public final static String insertReque = "INSERT INTO requerente (cpf_rq, nome_rq, estado_civil_rq, profissao_rq, pai_rq, mae_rq, nacionalidade_rq, endereco_rq) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    public final static String selectReque = "SELECT `cpf_ag`, `nome_ag` FROM requerimento.agrimensor";
-    public final static String selectAgri = "SELECT `cpf_rq`, `nome_rq` FROM requerimento.requerente";
+    public final static String selectReque = "SELECT cpf_ag, nome_ag FROM agrimensor";
+    public final static String selectAgri = "SELECT cpf_rq, nome_rq FROM requerente";
     
 }
