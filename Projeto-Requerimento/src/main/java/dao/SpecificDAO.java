@@ -59,4 +59,22 @@ public class SpecificDAO extends GenericDAO{
         }
         return array;
     }    
+    
+     public static ArrayList<requerente> readReque(){
+        ArrayList<requerente> array = new ArrayList<>();
+        try{
+            prepStat(Sql.selectReque, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            genericQuery();
+            rsdados.first();
+            do{
+                requerente reque = new requerente();
+                reque.setCpf(rsdados.getString(1));
+                reque.setNome(rsdados.getString(2));
+                array.add(reque);
+            }while(rsdados.next());         
+        }catch(SQLException erro){
+            System.out.println("Erro readDados ao executar conSsulta = " + erro);
+        }
+        return array;
+    }    
 }

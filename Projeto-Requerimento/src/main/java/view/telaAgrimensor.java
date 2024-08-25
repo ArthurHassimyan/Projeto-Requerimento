@@ -409,7 +409,9 @@ public class telaAgrimensor extends javax.swing.JFrame {
     public void readTable(){
         DefaultTableModel model = (DefaultTableModel) tableAgri.getModel();
         for(agrimensor agri: SpecificDAO.readAgri()){
-            model.addRow(new Object[]{            agri.getNome(),            agri.getCpf()});
+            model.addRow(new Object[]{            
+                agri.getNome(),            
+                agri.getCpf()});
         }
     }
     

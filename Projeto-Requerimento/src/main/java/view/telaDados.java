@@ -6,6 +6,7 @@ package view;
 
 import dao.SpecificDAO;
 import java.sql.SQLException;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.text.MaskFormatter;
 import model.requerente;
 
@@ -21,6 +22,7 @@ public class telaDados extends javax.swing.JFrame {
     public telaDados() {
         SpecificDAO.CriaConexao();
         initComponents();
+        readTable();
     }
 
     /**
@@ -40,7 +42,7 @@ public class telaDados extends javax.swing.JFrame {
         comboBoxEstadoCivil = new javax.swing.JComboBox<>();
         buttonCad = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableReque = new javax.swing.JTable();
         buttonEdit = new javax.swing.JButton();
         buttonDel = new javax.swing.JButton();
         buttonSave = new javax.swing.JButton();
@@ -89,12 +91,9 @@ public class telaDados extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableReque.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "Nome", "CPF"
@@ -115,7 +114,7 @@ public class telaDados extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tableReque);
 
         buttonEdit.setText("EDITAR");
         buttonEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -416,6 +415,15 @@ public class telaDados extends javax.swing.JFrame {
         });
     }
 
+   public void readTable(){
+        DefaultTableModel model = (DefaultTableModel) tableReque.getModel();
+        for(requerente reque: SpecificDAO.readReque()){
+            model.addRow(new Object[]{            
+                reque.getNome(),            
+                reque.getCpf()});
+        }
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCad;
     private javax.swing.JButton buttonDel;
@@ -433,7 +441,7 @@ public class telaDados extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tableReque;
     private javax.swing.JTextField textFEndereco;
     private javax.swing.JTextField textFNacionalidade;
     private javax.swing.JTextField textFNome;

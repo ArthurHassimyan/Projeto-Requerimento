@@ -246,6 +246,23 @@ public class telaInicial extends javax.swing.JFrame {
         });
     }
 
+    /* public void readJtable(){
+        DefaultTableModel modelo = (DefaultTableModel) jTableDados.getModel();
+        
+        SpecificDAO pdao = new SpecificDAO();
+        
+       for(Requerente p: pdao.read()){
+        
+            modelo.addRow(new Object[]{
+                p.getId(),
+                p.getDescricao(),
+                p.getQtd(),
+                p.getPreco() 
+            });
+        }
+    }*/
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonADAgrimensor;
     private javax.swing.JButton buttonADRequerente;
