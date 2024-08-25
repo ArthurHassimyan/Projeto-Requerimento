@@ -7,6 +7,7 @@ package dao;
 import controllerString.Sql;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import model.agrimensor;
 import model.requerente;
 
@@ -29,7 +30,7 @@ public class SpecificDAO extends GenericDAO{
     } 
     
     public static boolean insertReque(requerente rq) throws SQLException {
-        prepStat(Sql.insertReque, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);        
+        prepStat(Sql.insertReque, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
         pstdados.setString(1, rq.getCpf());
         pstdados.setString(2, rq.getNome());
         pstdados.setString(3, rq.getEstadoCivil());
@@ -41,4 +42,21 @@ public class SpecificDAO extends GenericDAO{
         return genericUpdate();
     }
     
+    public static ArrayList<agrimensor> readAgri(){
+        ArrayList<agrimensor> array = new ArrayList<>();
+        try{
+            prepStat(Sql.selectAgri, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            genericQuery();
+            rsdados.first();
+            do{
+                agrimensor agri = new agrimensor();
+                agri.setCpf(rsdados.getString(1));
+                agri.setNome(rsdados.getString(2));
+                array.add(agri);
+            }while(rsdados.next());         
+        }catch(SQLException erro){
+            System.out.println("Erro readAgri ao executar conSsulta = " + erro);
+        }
+        return array;
+    }    
 }
